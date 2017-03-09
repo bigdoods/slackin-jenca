@@ -1,7 +1,25 @@
 version: "2"
 services:
-  slackin:
+  main:
     build: .
+    image: bigdoods/slackinjenca
+    ports:
+            - 3000
     environment:
-      SLACK_TOKEN: xxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxx
-      SLACK_ORG: yoursubdomain
+            - SLACK_TOKEN=xoxp-14824353505-14822913108-150293214099-05dd7de994b3761270b9870e031e1293
+            - SLACK_ORG=jenca-team
+            - VIRTUAL_HOST
+            - VIRTUAL_PORT=3000
+    networks:
+            - front
+            - back
+            - default
+networks:
+    front:
+        external:
+            name: "puffin_front"
+    back:
+        external:
+            name: "puffin_back"
+
+

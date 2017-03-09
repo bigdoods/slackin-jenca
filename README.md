@@ -1,33 +1,17 @@
-# Slackin Dockerfile
+# Slackin
+_Register for jenca slack_
 
-This will build and run [Slackin](https://github.com/rauchg/slackin) in a Docker container.
+### About
 
-## You will need
+This application will allow you to register for the Jenca team slack. Come join in the community discussions!
 
-* Your Slack organisation name (the subdomain part in your Slack URL)
-* An API token for your organisation, generate one at https://api.slack.com/web
 
-## Run from Dockerhub
+### Instructions
 
-`docker run --name myslackin -e SLACK_ORG=myOrg -e SLACK_TOKEN=mySlackWebApiToken -d chk1/slackin`
+1. Open application
+2. Enter Email
+3. Click 'GET MY INVITE'
 
-## Run from Github
+### Github
 
-Clone [this repo](https://github.com/codeformuenster/slackin-docker), put your Slack organization name and API key in the `docker-compose.yml`, then run:
-
-`docker-compose up`
-
-It will take a minute to build, then you should see output like the following:
-
-```
-slackin_1 | Wed Jan 28 2015 20:33:13 GMT+0000 (UTC) – online 5, total 10 (+1163ms)
-slackin_1 | Wed Jan 28 2015 20:33:14 GMT+0000 (UTC) – fetching
-```
-
-You should then be able to reach the webinterface at [localhost:3000](http://localhost:3000).
-
-If you are seeing errors similar to "invalid response from Slack" (along with some debugging information like `at SlackData.onres (/usr/local/lib/node_modules/slackin/node/slack.js:87:22) ... at _stream_readable.js:944:16`), then your API key and/or organization name are wrong.
-
-## License
-
-MIT License
+https://github.com/rauchg/slackin
